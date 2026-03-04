@@ -1,12 +1,11 @@
-import os
+import streamlit as st
 from crewai import Agent, LLM
-from dotenv import load_dotenv
 
-load_dotenv()
 
+api_key = st.secrets["GROQ_API_KEY"]
 llm = LLM(
     model="groq/llama-3.3-70b-versatile",
-    api_key=os.getenv("GROQ_API_KEY")
+    api_key=api_key
 )
 
 resume_reviewer = Agent(
