@@ -7,7 +7,7 @@ llm = LLM(
     model="groq/llama-3.1-8b-instant",
     api_key=api_key,
     temperature=0.3,
-    max_tokens=5000
+    max_tokens=1000
 )
 
 resume_reviewer = Agent(
